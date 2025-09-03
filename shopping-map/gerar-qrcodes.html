@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Gerar QR Codes</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/qrcode.js/lib/qrcode.min.js"></script>
   <style>
     body { font-family: 'Inter', sans-serif; background: #0a0a1a; color: #e0f7ff; padding: 20px; text-align: center; }
@@ -15,6 +16,15 @@
   </style>
 </head>
 <body>
+    <nav class="navbar">
+    <div class="nav-logo">🔍 <strong>Localizador Técnico</strong></div>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link active">Início</a></li>
+      <li><a href="escada.html" class="nav-link">Escadas</a></li>
+      <li><a href="gerar-qrcodes.html" class="nav-link">Bluetooth</a></li>
+      <li><a href="admin.html" class="nav-link">Adimin</a></li>
+    </ul>
+  </nav>
   <h1>🖨️ QR Codes para Escadas Técnicas</h1>
   <p>Clique em "Baixar" para salvar o QR Code de cada escada.</p>
   <div class="qrcodes" id="qrcodes"></div>
