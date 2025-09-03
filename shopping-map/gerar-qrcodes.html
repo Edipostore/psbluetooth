@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gerar QR Codes</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode.js/lib/qrcode.min.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0a0a1a; color: #e0f7ff; padding: 20px; text-align: center; }
+    h1 { color: #00bfff; }
+    .qrcodes { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-top: 30px; }
+    .qr-item { background: rgba(18, 18, 46, 0.9); padding: 15px; border-radius: 12px; border: 1px solid rgba(100, 150, 255, 0.3); max-width: 200px; }
+    .qr-item h3 { margin: 10px 0; font-size: 1.1rem; color: #a8d8ff; }
+    button { margin-top: 10px; padding: 8px 12px; background: #00bfff; color: white; border: none; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #0099cc; }
+  </style>
+</head>
+<body>
+  <h1>🖨️ QR Codes para Escadas Técnicas</h1>
+  <p>Clique em "Baixar" para salvar o QR Code de cada escada.</p>
+  <div class="qrcodes" id="qrcodes"></div>
+
+  <script>
+    const beacons = [
+      { id: "escada1", nome: "Escada Técnica A", url: "http://seusite.com/escada?id=escada1" },
+      { id: "escada2", nome: "Escada Técnica B", url: "http://seusite.com/escada?id=escada2" },
+      { id: "escada3", nome: "Escada Técnica C", url: "http://seusite.com/escada?id=escada3" },
+      { id: "escada4", nome: "Escada Técnica D", url: "http://seusite.com/escada?id=escada4" },
+      { id: "escada5", nome: "Escada Técnica E", url: "http://seusite.com/escada?id=escada5" },
+      { id: "escada6", nome: "Escada Técnica F", url: "http://seusite.com/escada?id=escada6" }
+    ];
+
+    const container = document.getElementById('qrcodes');
+    beacons.forEach(beacon => {
+      const div = document.createElement('div');
+      div.className = 'qr-item';
+      div.innerHTML = `<h3>${beacon.nome}</h3>`;
+      const canvas = document.createElement('canvas');
+      new QRCode(canvas, { text: beacon.url, width: 128, height: 128 });
+      div.appendChild(canvas);
+      const btn = document.createElement('button');
+      btn.textContent = 'Baixar';
+      btn.onclick = () => {
+        const a = document.createElement('a');
+        a.download = `qrcode-${beacon.id}.png`;
+        a.href = canvas.toDataURL('image/png');
+        a.click();
+      };
+      div.appendChild(btn);
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>

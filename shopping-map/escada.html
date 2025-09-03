@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Escada Técnica</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a1a;
+      color: #e0f7ff;
+      padding: 40px;
+      text-align: center;
+    }
+    .card {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 30px;
+      background: rgba(18, 18, 46, 0.9);
+      border-radius: 16px;
+      border: 1px solid rgba(100, 150, 255, 0.3);
+    }
+    h1 { color: #00bfff; }
+    p { margin: 15px 0; }
+    strong { color: #a8d8ff; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1 id="titulo">Escada Técnica</h1>
+    <p><strong>Localização:</strong> <span id="local">Carregando...</span></p>
+    <p><strong>Status:</strong> <span id="status">Carregando...</span></p>
+    <p><strong>Última Manutenção:</strong> <span id="manutencao">Carregando...</span></p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    // Exemplo de dados simulados
+    const beacons = [
+      {
+        id: "escada01",
+        nome: "Escada Técnica A",
+        descricao: "Bloco A - Subsolo",
+        status: "Operacional",
+        ultima_manutencao: "2025-08-15"
+      },
+      {
+        id: "escada02",
+        nome: "Escada Técnica B",
+        descricao: "Bloco B - Térreo",
+        status: "Em manutenção",
+        ultima_manutencao: "2025-09-01"
+      }
+    ];
+
+    const escada = beacons.find(e => e.id === id);
+
+    if (escada) {
+      document.getElementById('titulo').textContent = escada.nome;
+      document.getElementById('local').textContent = escada.descricao;
+      document.getElementById('status').textContent = escada.status;
+      document.getElementById('manutencao').textContent = escada.ultima_manutencao;
+    } else {
+      document.getElementById('titulo').textContent = "Escada não encontrada";
+      document.getElementById('local').textContent = "-";
+      document.getElementById('status').textContent = "-";
+      document.getElementById('manutencao').textContent = "-";
+    }
+  </script>
+</body>
+</html>

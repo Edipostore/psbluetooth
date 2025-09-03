@@ -1,0 +1,86 @@
+[
+  {
+    "id": "escada1",
+    "nome": "Escada Técnica A",
+    "descricao": "Corredor Central",
+    "posicao_mapa": { "x": 550, "y": 1200 },
+    "bluetooth": {
+      "uuid": "B9407733-F564-4B8D-88F5-C4E382A9956C",
+      "major": 100,
+      "minor": 1,
+      "identificador": "B9407733-F564-4B8D-88F5-C4E382A9956C-100-1"
+    },
+    "status": "Ativo",
+    "ultima_manutencao": "2025-03-15"
+  },
+  {
+    "id": "escada2",
+    "nome": "Escada Técnica B",
+    "descricao": "Próximo ao MALL",
+    "posicao_mapa": { "x": 800, "y": 1050 },
+    "bluetooth": {
+      "uuid": "B9407733-F564-4B8D-88F5-C4E382A9956C",
+      "major": 100,
+      "minor": 2,
+      "identificador": "B9407733-F564-4B8D-88F5-C4E382A9956C-100-2"
+    },
+    "status": "Ativo",
+    "ultima_manutencao": "2025-03-14"
+  },
+  {
+    "id": "escada3",
+    "nome": "Escada Técnica C",
+    "descricao": "Praça de Eventos",
+    "posicao_mapa": { "x": 1050, "y": 900 },
+    "bluetooth": {
+      "uuid": "B9407733-F564-4B8D-88F5-C4E382A9956C",
+      "major": 100,
+      "minor": 3,
+      "identificador": "B9407733-F564-4B8D-88F5-C4E382A9956C-100-3"
+    },
+    "status": "Ativo",
+    "ultima_manutencao": "2025-03-16"
+  },
+  {
+    "id": "escada4",
+    "nome": "Escada Técnica D",
+    "descricao": "Área de Alimentação",
+    "posicao_mapa": { "x": 1200, "y": 750 },
+    "bluetooth": {
+      "uuid": "B9407733-F564-4B8D-88F5-C4E382A9956C",
+      "major": 100,
+      "minor": 4,
+      "identificador": "B9407733-F564-4B8D-88F5-C4E382A9956C-100-4"
+    },
+    "status": "Ativo",
+    "ultima_manutencao": "2025-03-13"
+  },
+  {
+    "id": "escada5",
+    "nome": "Escada Técnica E",
+    "descricao": "Entrada Leste",
+    "posicao_mapa": { "x": 1400, "y": 800 },
+    "bluetooth": {
+      "uuid": "B9407733-F564-4B8D-88F5-C4E382A9956C",
+      "major": 100,
+      "minor": 5,
+      "identificador": "B9407733-F564-4B8D-88F5-C4E382A9956C-100-5"
+    },
+    "status": "Ativo",
+    "ultima_manutencao": "2025-03-12"
+  },
+  {
+    "id": "escada6",
+    "nome": "Escada Técnica F",
+    "descricao": "Cinema",
+    "posicao_mapa": { "x": 650, "y": 900 },
+    "bluetooth": {
+      "uuid": "B9407733-F564-4B8D-88F5-C4E382A9956C",
+      "major": 100,
+      "minor": 6,
+      "identificador": "B9407733-F564-4B8D-88F5-C4E382A9956C-100-6"
+    },
+    "status": "Ativo",
+    "ultima_manutencao": "2025-03-10"
+  }
+]
